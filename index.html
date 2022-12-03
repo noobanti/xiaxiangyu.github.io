@@ -40,6 +40,13 @@
         }
       }
 
-      window.onload = run_on_start;
+      window.onload =function(){
+        // get the parameters for the current URL
+        var giveInvite = GetURLParameter('invite');
+        if(giveInvite == "hack_the_world")
+        {
+          alert(genI(giveInvite));
+        }
+      };
     </script>
 <p>hello</p>
