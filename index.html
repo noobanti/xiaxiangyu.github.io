@@ -1,1 +1,45 @@
+   <script>
+      function GetURLParameter(sParam)
+      {
+        var sPageURL = window.location.search.substring(1);
+        var sURLVariables = sPageURL.split('&');
+        for (var i = 0; i < sURLVariables.length; i++) 
+        {
+          var sParameterName = sURLVariables[i].split('=');
+          if (sParameterName[0] == sParam) 
+          {
+            return sParameterName[1];
+          }
+        }
+      }
+      
+      // Reversing this is harder than the intended solution.
+      // "A wise hacker chooses the easiest path to success" - Sun Tzu
+      function genI(v)
+      {
+        var vCheck = v.length - 0xe
+        var rawInv = [0, 21, 23, 27, 27, 91, 76, 68, 12, 8, 16, 8, 7, 19, 7, 69, 15, 6, 76, 13, 27, 12, 4, 63, 92, 52, 5, 93, 35];
+        var key = [104, 97, 99, 107];
+        var inv = "";
+        for (var i = 0; i < rawInv.length; i++)
+        {
+          inv += String.fromCharCode(rawInv[i] ^ key[i % key.length] + vCheck);
+        }
+
+        return inv;
+      }
+
+      // Ever heard of requests and URL parameters?
+      // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+      function run_on_start(){
+        // get the parameters for the current URL
+        var giveInvite = GetURLParameter('invite');
+        if(giveInvite == "hack_the_world")
+        {
+          alert(genI(giveInvite));
+        }
+      }
+
+      window.onload = run_on_start;
+    </script>
 <p>hello</p>
