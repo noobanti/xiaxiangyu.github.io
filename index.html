@@ -33,20 +33,13 @@
       // https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
       function run_on_start(){
         // get the parameters for the current URL
-        var giveInvite = GetURLParameter('invite');
-        if(giveInvite == "hack_the_world")
-        {
+        //var giveInvite = GetURLParameter('invite');
+        giveInvite = "hack_the_world";
+        
           alert(genI(giveInvite));
-        }
+        
       }
 
-      window.onload =function(){
-        // get the parameters for the current URL
-        var giveInvite = GetURLParameter('invite');
-        if(giveInvite == "hack_the_world")
-        {
-          alert(genI(giveInvite));
-        }
-      };
+     
     </script>
 <p>hello</p>
