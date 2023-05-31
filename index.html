@@ -6,9 +6,37 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        .resume {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #445577;
+        }
+        a {
+            color: #445577;
         }
         ul {
             list-style-type: none;
+            padding-left: 0;
+        }
+        button {
+            margin: 10px 0;
+            padding: 10px;
+            color: #fff;
+            background-color: #445577;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
         #english, #chinese {
             display: none;
@@ -18,46 +46,99 @@
 
 <body>
 
-<button onclick="switchLanguage('english')">English</button>
-<button onclick="switchLanguage('chinese')">中文</button>
+<div class="resume">
 
-<div id="english">
-    <!-- 英文简历内容 -->
-    <!-- 注意，这部分内容需要你用你的英文简历的HTML替换 -->
-</div>
+    <button onclick="switchLanguage('english')">English</button>
+    <button onclick="switchLanguage('chinese')">中文</button>
 
-<div id="chinese">
-  <!-- 中文简历内容 -->
+    <div id="english">
+        <h1>Xiangyu Xia</h1>
+        <p>+86 13241476556 | <a href="mailto:xiaxiangyu2001@outlook.com">xiaxiangyu2001@outlook.com</a></p>
 
-  <center>
-    <h1>夏祥宇</h1>
-    <p><small>+86 13241476556 | <a href="mailto:xiaxiangyu2001@outlook.com">xiaxiangyu2001@outlook.com</a></small></p>
-  </center>
+        <h2>Education</h2>
+        <ul>
+            <li>
+                <strong>Beijing City University, Beijing, China</strong><br>
+                Bachelor of Computer Science and Technology, Expected July 2023<br>
+                GPA: 3.4
+            </li>
+        </ul>
 
-  <h2>教育经历</h2>
-  <ul>
-    <li><b>北京城市大学</b>（北京，中国）<br><i>计算机科学与技术学士</i>（预计2023年7月毕业）<br>
-      <ul>
-        <li>绩点：3.4</li>
-      </ul>
-    </li>
-  </ul>
+        <h2>Research and Project Experience</h2>
+        <ul>
+            <li>
+                <strong>Gate-Controlled Graph Neural Network for Program Classification</strong><br>
+                City-level Innovation Project, Beijing, China, Dec 2019 – Dec 2020
+                <ul>
+                    <li>Led the project to represent the rich syntax and semantic information of the program with graph structure, and converted the program source code into an AST abstract syntax tree.</li>
+                    <li>Implemented a GGNN model to understand the structure and semantic information of programs and extract code features for high-precision classification.</li>
+                </ul>
+            </li>
 
-  <h2>研究与项目经验</h2>
-  <ul>
-    <li><b>基于门控图神经网络的程序分类</b><br><i>市级创新项目</i>（北京，中国）<br>
-      <ul>
-        <li>领导项目将丰富的程序语法和语义信息用图结构表示，并将程序源代码转化为AST抽象语法树。</li>
-        <li>实现了一个GGNN模型，用于理解程序的结构和语义信息，并提取代码特性进行高精度分类。</li>
-      </ul>
-    </li>
-    <li><b>基于图网络的源代码漏洞检测</b><br><i>国家级创新项目</i>（北京，中国）<br>
-      <ul>
-        <li>指导项目将源代码转化为包含语法和语义信息的图，训练GGNN模型进行高精度漏洞检测。</li>
-        <li>使用Django开源框架部署训练模型，以便通过浏览器访问，方便开发者使用。</li>
-      </ul>
-    </li>
-  </ul>
+            <li>
+                <strong>Vulnerability Detection of Source Code Based on Graph Network</strong><br>
+                National-level Innovation Project, Beijing, China, Mar 2021 – May 2022
+                <ul>
+                    <li>Directed the project to convert source code into a graph containing syntax and semantic information. Trained the GGNN model for high-precision vulnerability detection.</li>
+                    <li>Deployed the trained model using the Django open-source framework for accessibility through a browser, facilitating developer usage.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>Code Summary and Interpretability of Deep Learning</strong><br>
+                Collaborative Research with CAS and ASU Professors, Online, Jun 2022 – Present
+                <ul>
+                    <li>Engaged in collaborative research with Prof. Jian Liu from the Institute of Information Engineering, Chinese Academy of Sciences, and Prof. Ruoyu Wang from Arizona State University, with a focus on code summarization and the interpretability of deep learning.</li>
+                    <li>Successfully replicated and reviewed numerous academic papers on code summarization to deepen understanding of the latest advancements and challenges within the field.</li>
+                    <li>Participated in weekly meetings for progress reports and collaborative discussions to further research development.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Publications</h2>
+        <ul>
+            <li>
+                <strong>Deep Learning Framework Mindspore and Pytorch Comparison</strong><br>
+                First author, Regular conference WJCI
+                <ul>
+                    <li>In this paper, we perform analytical and experimental analysis to reveal the comparison of training speed of MIndSpore and PyTorch on a single GPU.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>A Vulnerability Detection Approach Based on Comparative Learning</strong><br>
+                Third author, EI indexed
+                <ul>
+                    <li>The deep learning model trained based on the data set and the proposed learning approach in the paper can identify 150 CWE vulnerabilities with an accuracy of 92\%, an average PR value of 0.84 and an average ROC-AUC value of 0.96.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Multi-sample Comparison and Fusion of Multi-type Vulnerability Detection Method and System</strong><br>
+                Fourth inventor
+                <ul>
+                    <li>The patent technology of this invention can reduce the complexity of the model and improve the ability and accuracy of the model to identify vulnerabilities.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Awards</h2>
+        <ul>
+            <li>
+                <strong>National College Student Mathematics Modeling Competition</strong><br>
+                Second Prize in Beijing City
+            </li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, Java, C++</li>
+            <li>Tools and Technologies: GGNN, PyTorch, MindSpore, Django</li>
+        </ul>
+    </div>
+
+    <div id="chinese">
+        <!-- 在这里添加中文简历内容，将英文内容翻译成中文 -->
+    </div>
+
 </div>
 
 <script>
